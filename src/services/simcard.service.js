@@ -92,4 +92,11 @@ router.post("/api/v1/SimCard/binding", (req, res) => {
   res.sendStatus(200);
 });
 
+router.get("/api/v2/Sim/IccPart/Check", (req, res) => {
+  res.status(200);
+  res.json({
+    isCorrect: true,
+  });
+});
+
 module.exports = router;

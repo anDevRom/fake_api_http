@@ -10,7 +10,7 @@ router.get(
 
     const okResponse = {
       isAvailable: true,
-      isOnline: true,
+      isOnline: false,
       checklist: [
         {
           id: 1,
@@ -72,7 +72,7 @@ router.get(
     };
     const errorResponse = {
       isAvailable: false,
-      checklist: [
+      checklists: [
         {
           id: 1,
           title: "ClientType",
@@ -118,5 +118,57 @@ router.post("/api/v1/ClientRecreations/:msisdn", async (req, res) => {
   res.status(200);
   res.json(okResponse);
 });
+
+router.get("/api/v1/ErfDuplicate/Check", (req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.status(200);
+  res.json({
+    isNeedDuplicateRFA: true,
+  });
+});
+
+router.get(
+  "/api/v1/ClientTermination/:msisdn/isAvailable",
+  async (req, res) => {
+    await delay(3000);
+
+    const okResponse = {
+      isAvailable: true,
+    };
+    const errorResponse = {
+      isAvailable: false,
+      checklist: [
+        {
+          id: 1,
+          title: "ClientType",
+          result: true,
+          message: null,
+        },
+        {
+          id: 2,
+          title: "Balance",
+          result: false,
+          message: "Баланс абонента отрицательный",
+        },
+        {
+          id: 3,
+          title: "PromisedPayment",
+          result: false,
+          message: "Ошибка.",
+        },
+        {
+          id: 4,
+          title: "ClientProfile",
+          result: true,
+          message: null,
+        },
+      ],
+    };
+
+    res.setHeader("Content-Type", "application/json");
+    res.status(200);
+    res.json(okResponse);
+  }
+);
 
 module.exports = router;

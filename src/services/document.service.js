@@ -4,6 +4,14 @@ const { delay } = require("../helpers");
 
 const router = express.Router();
 
+router.post("/api/v1/Documents/Handlings/:handlingId", async (req, res) => {
+  await delay(3000);
+
+  res.setHeader("Content-Type", "text/plain");
+  res.status(200);
+  res.send('test_request_id')
+});
+
 router.get("/api/v1/Documents/Templates", async (req, res) => {
   await delay(3000);
 

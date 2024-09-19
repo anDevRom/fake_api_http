@@ -1,0 +1,61 @@
+{
+    "Data": {
+        "Sex": 0,
+        "TariffName": "Классический v. 1.6",
+        "FullName": "Константинов Максим Викторович",
+        "Birthday": null,
+        "RegistrationAddress": {
+            "City": "Саратовская обл., Саратовский р-н, д. Кокурино",
+            "Street": "Центральная",
+            "House": "42, кв. 3",
+            "PostIndex": null
+        },
+        "IdentityDocument": "Паспорт РФ; 6308; 254369; 25.09.2008; ОТДЕЛЕНИЕМ УФМС РОССИИ ПО САРАТОВСКОЙ ОБЛ. В САРАТОВСКОМ Р-НЕ;",
+        "SubscriberId": 72692791,
+        "SubscriberBranchId": 30,
+        "SubscriberTypeId": "1",
+        "SubscriberStatusId": 1,
+        "ClientId": 74196656,
+        "ClientTypeId": 1,
+        "Msisdn": "79536262694",
+        "Name": "Константинов Максим Викторович",
+        "LoyalityCategoryId": 2,
+        "ActivationDate": "2024-02-08T13:45:08+03:00",
+        "RatePlanId": 16185,
+        "PayPackClientAccount": 80761843,
+        "UType": "LTE",
+        "AdditionalOptParameters": [
+            {
+                "Key": "reserve",
+                "Value": "0"
+            },
+            {
+                "Key": "contactDateOutCall",
+                "Value": "22.02.2024"
+            },
+            {
+                "Key": "contactInitiatorOutCall",
+                "Value": "приветственный автообзвон"
+            },
+            {
+                "Key": "contactTypeOutCall",
+                "Value": "другие контакты"
+            },
+            {
+                "Key": "webCareLevelAccessTypeId",
+                "Value": "Пользователь"
+            }
+        ],
+        "IdentityDocumentFields": {
+            "TypeDoc": "Временное удостоверение личности гражданина РФ форма № 2-П",
+            "Series": "6308",
+            "Number": "254369",
+            "IssuedBy": "ОТДЕЛЕНИЕМ УФМС РОССИИ ПО САРАТОВСКОЙ ОБЛ. В САРАТОВСКОМ Р-НЕ",
+            "IssuedOn": "25.09.2008"
+        }
+    },
+    "IsSuccess": true,
+    "MessageText": null,
+    "ResultType": 1,
+    "ResultCode": 0
+}

@@ -10,7 +10,7 @@ router.get(
 
     const okResponse = {
       isAvailable: true,
-      isOnline: false,
+      isOnline: true,
       checklist: [
         {
           id: 1,
@@ -112,6 +112,8 @@ router.post("/api/v1/ClientRecreations/:msisdn", async (req, res) => {
   const okResponse = {
     newClientId: 0,
     isOnline: true,
+    serviceRequestId: '123',
+    number: 'TT123'
   };
 
   res.setHeader("Content-Type", "application/json");
@@ -134,6 +136,7 @@ router.get(
 
     const okResponse = {
       isAvailable: true,
+      isOnline: true,
     };
     const errorResponse = {
       isAvailable: false,
@@ -170,5 +173,14 @@ router.get(
     res.json(okResponse);
   }
 );
+
+router.post('/api/v1/ClientTermination/:msisdn', (req, res) => {
+  const okResponse = {
+    serviceRequestId: '1', 
+    number: '2'
+  }
+
+  res.json(okResponse)
+})
 
 module.exports = router;
